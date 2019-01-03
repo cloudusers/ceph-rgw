@@ -45,5 +45,12 @@ this means, all write data for app.ceph will be save into app-placement(it have 
 
 
 
-**notice**  
+**NOTICE**  
+authrozation of put is public-read(all id or user can read your object), if wanna use acl, choose put-acl.sh and take care of below lines in file
+
+stringToSign="PUT\n\n\n${dateValue}\nx-amz-grant-read:**id=grantee.ceph**\n${resource}"
+
+MUST the same as 
+
+ -H "x-amz-grant-read: **id=grantee.ceph**" \
 
