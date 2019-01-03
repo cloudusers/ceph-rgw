@@ -1,6 +1,7 @@
 # ceph-rgw
-operations of rgw in CEPH
 
+
+**FIRST** to prepare environment
 
 **creating  user【eg. user=app.ceph】**
 ```
@@ -29,14 +30,16 @@ operations of rgw in CEPH
 ```
 
 
-AFTER above, you have
-(1) key of user=app.ceph
-access_key
-secret_key
+**AFTER** above, you have  
+(1) key of user=app.ceph  
+- access_key  
+- secret_key
 
-(2) data placement for app.ceph  
-this means, all wrote data for app.ceph will be storage into app-placement(it have corresponding pools) 
+(2) data placement for app.ceph    
+this means, all write data for app.ceph will be save into app-placement(it have corresponding pools) 
 
 
-THEN, exec bucket create script to CREATE bucket
+**THEN** , exec bucket create script to CREATE bucket  
+
+**LAST** use put or get to upload and download your object  
 
